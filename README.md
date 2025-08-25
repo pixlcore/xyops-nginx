@@ -4,6 +4,12 @@ This repo generates a custom Docker Image designed to be used with [xyOps](https
 
 This is a wrapper around the official [Nginx Docker Image](https://hub.docker.com/_/nginx), which layers in [Node.js](https://nodejs.org/) and a custom [Health Check Daemon](https://github.com/pixlcore/xyops-healthcheck) for [xyOps](https://xyops.io).  This is for use with xyOps multi-master setups, utilizing TLS.  For setup instructions, please see the [xyOps Self-Hosting Guide](https://github.com/pixlcore/xyops/blob/main/docs/self-hosting.md).
 
+## Current Versions
+
+- Nginx v1.28
+- Node.js v22
+- Health Check v1.0.5
+
 # Usage
 
 ## Docker
