@@ -2,7 +2,7 @@
 
 This repository generates a custom Docker Image designed to be used with [xyOps](https://xyops.io).
 
-This is a wrapper around the official [Nginx Docker Image](https://hub.docker.com/_/nginx), which layers in [Node.js](https://nodejs.org/) and a custom [Health Check Daemon](https://github.com/pixlcore/xyops-healthcheck) for [xyOps](https://xyops.io).  This is for use with xyOps multi-master setups, utilizing TLS.  For setup instructions, please see the [xyOps Self-Hosting Guide](https://github.com/pixlcore/xyops/blob/main/docs/self-hosting.md).
+This is a wrapper around the official [Nginx Docker Image](https://hub.docker.com/_/nginx), which layers in [Node.js](https://nodejs.org/) and a custom [Health Check Daemon](https://github.com/pixlcore/xyops-healthcheck) for [xyOps](https://xyops.io).  This is for use with xyOps multi-master setups, utilizing TLS.  For setup instructions, please see the [xyOps Self-Hosting Guide](https://github.com/pixlcore/xyops/blob/main/docs/hosting.md).
 
 ## Current Versions
 
@@ -14,7 +14,7 @@ This is a wrapper around the official [Nginx Docker Image](https://hub.docker.co
 
 ## Docker
 
-This repo automatically publishes a Docker image on every tag, which is designed to run with [Nginx](https://nginx.org/) for xyOps multi-master installs.  For complete usage instructions, see the [xyOps Self-Hosting Guide](https://github.com/pixlcore/xyops/blob/main/docs/self-hosting.md).  The official Docker image name is:
+This repo automatically publishes a Docker image on every tag, which is designed to run with [Nginx](https://nginx.org/) for xyOps multi-master installs.  For complete usage instructions, see the [xyOps Self-Hosting Guide](https://github.com/pixlcore/xyops/blob/main/docs/hosting.md).  The official Docker image name is:
 
 ```
 ghcr.io/pixlcore/xyops-nginx
