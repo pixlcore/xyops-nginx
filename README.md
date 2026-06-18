@@ -1,20 +1,20 @@
-# xyOps Multi-Master Nginx with TLS
+# xyOps Multi-Master Nginx
 
 This repository generates a custom Docker Image designed to be used with [xyOps](https://xyops.io).
 
-This is a wrapper around the official [Nginx Docker Image](https://hub.docker.com/_/nginx), which layers in [Node.js](https://nodejs.org/) and a custom [Health Check Daemon](https://github.com/pixlcore/xyops-healthcheck) for [xyOps](https://xyops.io).  This is for use with xyOps multi-master setups, utilizing TLS.  For setup instructions, please see the [xyOps Self-Hosting Guide](https://github.com/pixlcore/xyops/blob/main/docs/hosting.md).
+This is a wrapper around the official [Nginx Docker Image](https://hub.docker.com/_/nginx), which layers in [Node.js](https://nodejs.org/) and a custom [Health Check Daemon](https://github.com/pixlcore/xyops-healthcheck) for [xyOps](https://xyops.io).  This is for use with xyOps multi-master setups.  Plain HTTP is available on port 80 for local testing, and HTTPS is enabled on port 443 using default self-signed certs (which can be replaced with a Docker volume mount).  For full setup instructions, please see the [xyOps Self-Hosting Guide](https:/docs.xyops.io/hosting).
 
 ## Current Versions
 
-- Nginx v1.28
-- Node.js v22
+- Nginx v1.30
+- Node.js v24
 - Health Check v1.0.5
 
 # Usage
 
 ## Docker
 
-This repo automatically publishes a Docker image on every tag, which is designed to run with [Nginx](https://nginx.org/) for xyOps multi-master installs.  For complete usage instructions, see the [xyOps Self-Hosting Guide](https://github.com/pixlcore/xyops/blob/main/docs/hosting.md).  The official Docker image name is:
+This repo automatically publishes a Docker image on every tag, which is designed to run with [Nginx](https://nginx.org/) for xyOps multi-master installs.  For complete usage instructions, see the [xyOps Self-Hosting Guide](https:/docs.xyops.io/hosting).  The official Docker image name is:
 
 ```
 ghcr.io/pixlcore/xyops-nginx
@@ -34,10 +34,13 @@ services:
       - "./tls.crt:/etc/tls.crt:ro"
       - "./tls.key:/etc/tls.key:ro"
     ports:
+      - "80:80"
       - "443:443"
     networks:
       xyops-net:
 ```
+
+For local testing, you may omit the TLS volume mounts.  The image includes default self-signed certs at `/etc/tls.crt` and `/etc/tls.key`, and production certs can overwrite them by mounting files at those same paths.
 
 # License
 
