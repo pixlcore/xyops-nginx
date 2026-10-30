@@ -1,6 +1,6 @@
 {
 	"name": "xyops-nginx",
-	"version": "1.0.9",
+	"version": "1.0.10",
 	"private": true,
 	"description": "xyOps Multi-Master Nginx with HTTP and TLS.",
 	"author": "Joseph Huckaby <jhuckaby@pixlcore.com>",
