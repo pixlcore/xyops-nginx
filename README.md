@@ -1,4 +1,4 @@
-# xyOps Multi-Master Nginx
+# xyOps Multi-Conductor Nginx
 
 This repository generates a custom Docker Image designed to be used with [xyOps](https://xyops.io).
 
